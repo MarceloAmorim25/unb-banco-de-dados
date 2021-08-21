@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "8b97491b-e281-4663-8944-32a4080daed1",
+		"name": "trabalho-banco-de-dados",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/guildas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nome\": \"guilda-teste\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_path}}/v1/guildas",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"v1",
+						"guildas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/v1/guildas/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_path}}/v1/guildas/1",
+					"host": [
+						"{{base_path}}"
+					],
+					"path": [
+						"v1",
+						"guildas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
