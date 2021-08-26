@@ -37,6 +37,6 @@ Como configurar o ambiente:
 
 ## Modelagem conceitual
 
-![](/erdplus-modelagem-conceitual/modelo_conceitual_v001.jpg)
+![](/erdplus-modelagem-conceitual/modelo_conceitual_v001.png)
 
 ## Modelagem Mysql-Workbench
