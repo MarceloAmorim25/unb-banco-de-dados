@@ -1,3 +1,6 @@
+
+
+
 # Sistema de expedições de Mercenários
 ## Universidade de Brasília - 2021
 
@@ -19,7 +22,21 @@ Como configurar o ambiente:
 
 ## Sobre a API desenvolvida:
 
+<div style="display: inline_block"><br>
+  <img align="center" alt="Kotlin" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg">
+  <img align="center" alt="Kotlin" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg">
+  <img align="center" alt="Kotlin" height="40" width="50" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg">
+</div>
+
+<br>
+
 - Linguagem: Kotlin
 - Framework: Spring
 - SGBD: MySQL
 - GUI para interagir com o banco de dados: MySQL Workbench
+
+## Modelagem conceitual
+
+![](/erdplus-modelagem-conceitual/modelo_conceitual_v001.jpg)
+
+## Modelagem Mysql-Workbench
