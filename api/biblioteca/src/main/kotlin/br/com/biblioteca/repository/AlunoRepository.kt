@@ -1,4 +1,11 @@
 package br.com.biblioteca.repository
 
-class AlunoRepository {
+import org.springframework.stereotype.Component
+import javax.persistence.EntityManager
+
+@Component
+class AlunoRepository(
+    private val entityManager : EntityManager
+) {
+
 }

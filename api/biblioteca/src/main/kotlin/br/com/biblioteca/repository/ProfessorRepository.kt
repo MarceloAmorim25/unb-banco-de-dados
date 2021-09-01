@@ -1,4 +1,11 @@
 package br.com.biblioteca.repository
 
-class ProfessorRepository {
+import org.springframework.stereotype.Component
+import javax.persistence.EntityManager
+
+@Component
+class ProfessorRepository(
+    private val entityManager : EntityManager
+) {
+
 }
