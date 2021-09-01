@@ -1,6 +1,3 @@
-
-
-
 # Sistema de Biblioteca
 ## Universidade de Brasília - 2021
 
@@ -37,6 +34,7 @@ Como configurar o ambiente:
 
 ## Modelagem conceitual
 
-![](/erdplus-modelagem-conceitual/modelo_conceitual_v001.png)
-
 ## Modelagem Mysql-Workbench
+
+
+![](/workbench-modelagem/modelagem_mysql_workbench.png)
