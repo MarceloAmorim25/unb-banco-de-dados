@@ -5,19 +5,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema bibliotecadb
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema mydb
+-- Schema bibliotecadb
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `bibliotecadb` DEFAULT CHARACTER SET utf8 ;
+USE `bibliotecadb` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`Aluno`
+-- Table `bibliotecadb`.`Aluno`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Aluno` (
+CREATE TABLE IF NOT EXISTS `bibliotecadb`.`Aluno` (
   `matricula` INT NOT NULL,
   `nome` VARCHAR(45) NULL,
   `sexo` VARCHAR(45) NULL,
@@ -30,9 +30,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Funcionario`
+-- Table `bibliotecadb`.`Funcionario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Funcionario` (
+CREATE TABLE IF NOT EXISTS `bibliotecadb`.`Funcionario` (
   `matricula` INT NOT NULL,
   `nome` VARCHAR(45) NULL,
   `sexo` VARCHAR(45) NULL,
@@ -48,9 +48,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Professor`
+-- Table `bibliotecadb`.`Professor`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Professor` (
+CREATE TABLE IF NOT EXISTS `bibliotecadb`.`Professor` (
   `matricula` INT NOT NULL,
   `nome` VARCHAR(45) NULL,
   `sexo` VARCHAR(45) NULL,
@@ -66,9 +66,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Livro`
+-- Table `bibliotecadb`.`Livro`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Livro` (
+CREATE TABLE IF NOT EXISTS `bibliotecadb`.`Livro` (
   `codigo` INT NOT NULL,
   `titulo` VARCHAR(45) NULL,
   `editora` VARCHAR(45) NULL,
@@ -86,26 +86,26 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Livro` (
   INDEX `fk_Livro_Professor1_idx` (`Professor_matricula` ASC) VISIBLE,
   CONSTRAINT `fk_Livro_Aluno`
     FOREIGN KEY (`Aluno_matricula`)
-    REFERENCES `mydb`.`Aluno` (`matricula`)
+    REFERENCES `bibliotecadb`.`Aluno` (`matricula`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Livro_Funcionario1`
     FOREIGN KEY (`Funcionario_matricula`)
-    REFERENCES `mydb`.`Funcionario` (`matricula`)
+    REFERENCES `bibliotecadb`.`Funcionario` (`matricula`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Livro_Professor1`
     FOREIGN KEY (`Professor_matricula`)
-    REFERENCES `mydb`.`Professor` (`matricula`)
+    REFERENCES `bibliotecadb`.`Professor` (`matricula`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Pagamento`
+-- Table `bibliotecadb`.`Pagamento`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Pagamento` (
+CREATE TABLE IF NOT EXISTS `bibliotecadb`.`Pagamento` (
   `codigo` INT NOT NULL,
   `valor_pago` DECIMAL NULL,
   PRIMARY KEY (`codigo`))
@@ -113,9 +113,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`Livro_has_Pagamento`
+-- Table `bibliotecadb`.`Livro_has_Pagamento`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`Livro_has_Pagamento` (
+CREATE TABLE IF NOT EXISTS `bibliotecadb`.`Livro_has_Pagamento` (
   `Livro_codigo` INT NOT NULL,
   `Livro_Aluno_matricula` INT NOT NULL,
   `Livro_Funcionario_matricula` INT NOT NULL,
@@ -128,12 +128,12 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Livro_has_Pagamento` (
   INDEX `fk_Livro_has_Pagamento_Livro1_idx` (`Livro_codigo` ASC, `Livro_Aluno_matricula` ASC, `Livro_Funcionario_matricula` ASC, `Livro_Professor_matricula` ASC) VISIBLE,
   CONSTRAINT `fk_Livro_has_Pagamento_Livro1`
     FOREIGN KEY (`Livro_codigo` , `Livro_Aluno_matricula` , `Livro_Funcionario_matricula` , `Livro_Professor_matricula`)
-    REFERENCES `mydb`.`Livro` (`codigo` , `Aluno_matricula` , `Funcionario_matricula` , `Professor_matricula`)
+    REFERENCES `bibliotecadb`.`Livro` (`codigo` , `Aluno_matricula` , `Funcionario_matricula` , `Professor_matricula`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Livro_has_Pagamento_Pagamento1`
     FOREIGN KEY (`Pagamento_codigo`)
-    REFERENCES `mydb`.`Pagamento` (`codigo`)
+    REFERENCES `bibliotecadb`.`Pagamento` (`codigo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
