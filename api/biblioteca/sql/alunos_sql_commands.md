@@ -2,10 +2,8 @@
 
 ```
 
-INSERT INTO `bibliotecadb`.`Aluno`
-    (`matricula`,`nome`,`sexo`,`estado_civil`,`filiacao`,`endereco`,`telefone`)
-VALUES
-    (1, "teste 1", "teste", "teste", "teste", "teste", "teste"),
+INSERT INTO `bibliotecadb`.`Aluno` (`matricula`,`nome`,`sexo`,`estado_civil`,`filiacao`,`endereco`,`telefone`)
+VALUES (1, "teste 1", "teste", "teste", "teste", "teste", "teste");,
     (2, "teste 2", "teste", "teste", "teste", "teste", "teste"),
     (3, "teste 3", "teste", "teste", "teste", "teste", "teste"),
     (4, "teste 4", "teste", "teste", "teste", "teste", "teste"),
