@@ -2,7 +2,6 @@ package br.com.biblioteca.entity
 
 import javax.persistence.*
 
-
 @Entity
 @Table(name = "Aluno")
 data class Aluno(
@@ -27,6 +26,9 @@ data class Aluno(
     val endereco: String,
 
     @Column(name = "telefone")
-    val telefone: String
+    val telefone: String,
+
+    @OneToMany(mappedBy = "aluno")
+    val livros: MutableList<Livro> = mutableListOf()
 
 )

@@ -29,6 +29,18 @@ data class Livro(
     val areaConhecimento: String,
 
     @Column(name = "isbn")
-    val isbn: String
+    val isbn: String,
+
+    @ManyToOne
+    @JoinColumn(name = "Aluno_matricula")
+    val aluno: Aluno,
+
+    @ManyToOne
+    @JoinColumn(name = "Professor_matricula")
+    val professor: Professor,
+
+    @ManyToOne
+    @JoinColumn(name = "Funcionario_matricula")
+    val funcionario: Funcionario
 
 )

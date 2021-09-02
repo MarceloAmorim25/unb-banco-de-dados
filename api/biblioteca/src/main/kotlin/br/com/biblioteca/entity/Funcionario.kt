@@ -35,6 +35,9 @@ data class Funcionario(
     val habilidadesEspecificas: String,
 
     @Column(name = "cor_pele")
-    val corPele: String
+    val corPele: String,
+
+    @OneToMany(mappedBy = "funcionario")
+    val livros: MutableList<Livro> = mutableListOf()
 
 )

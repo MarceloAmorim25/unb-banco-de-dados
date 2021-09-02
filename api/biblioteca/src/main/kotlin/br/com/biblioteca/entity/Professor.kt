@@ -35,6 +35,9 @@ data class Professor(
     val titulacao: String,
 
     @Column(name = "ano_titulacao")
-    val anoTitulacao: Int
+    val anoTitulacao: Int,
+
+    @OneToMany(mappedBy = "professor")
+    val livros: MutableList<Livro> = mutableListOf()
 
 )
