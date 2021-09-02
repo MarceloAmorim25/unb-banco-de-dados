@@ -9,4 +9,29 @@ class FuncionarioRepository(
     private val entityManager : EntityManager
 ) {
 
+    fun save() {
+        entityManager
+            .createNativeQuery("")
+    }
+
+    fun update() {
+        entityManager
+            .createNativeQuery("")
+    }
+
+    fun findById() {
+        entityManager
+            .createNativeQuery("")
+    }
+
+    fun findAll() {
+        entityManager
+            .createNativeQuery("")
+    }
+
+    fun delete() {
+        entityManager
+            .createNativeQuery("")
+    }
+
 }

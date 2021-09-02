@@ -6,16 +6,19 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "Pagamento")
-class Pagamento(
+data class Pagamento(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val codigo: Int,
 
-    val dataPagamento: String,
-
+    @Column(name = "valor_pago")
     val valorPago: BigDecimal,
 
+    @Column(name = "data_pagamento")
+    val dataPagamento: String,
+
+    @Column(name = "hora_pagamento")
     val horaPagamento: LocalDateTime
 
 )

@@ -10,18 +10,25 @@ data class Livro(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val codigo: Int,
 
+    @Column(name = "titulo")
     val titulo: String,
 
+    @Column(name = "editora")
     val editora: String,
 
+    @Column(name = "autor")
     val autor: String,
 
+    @Column(name = "ano_edicao")
     val anoEdicao: Int,
 
+    @Column(name = "numero_paginas")
     val numeroPaginas: Int,
 
+    @Column(name = "area_conhecimento")
     val areaConhecimento: String,
 
+    @Column(name = "isbn")
     val isbn: String
 
 )
