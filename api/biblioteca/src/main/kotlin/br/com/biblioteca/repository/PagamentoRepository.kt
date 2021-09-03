@@ -1,7 +1,9 @@
 package br.com.biblioteca.repository
 
-import br.com.biblioteca.entity.Pagamento
-import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.stereotype.Component
 
 
-interface PagamentoRepository : JpaRepository<Pagamento, Int>
+@Component
+class PagamentoRepository {
+
+}

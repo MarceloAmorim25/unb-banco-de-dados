@@ -15,8 +15,16 @@ class AlunoRepository {
     @Transactional
     fun save(aluno: Aluno) {
 
-        val sqlStatment = "INSERT INTO `bibliotecadb`.`aluno` (`matricula`,`nome`,`sexo`,`estado_civil`,`filiacao`,`endereco`,`telefone`)\n" +
-                          "VALUES (${aluno.matricula}, \"${aluno.nome}\", \"${aluno.sexo}\", \"${aluno.estadoCivil}\", \"${aluno.filiacao}\", \"${aluno.endereco}\", \"${aluno.telefone}\");"
+        val sqlStatment =
+            "INSERT INTO `bibliotecadb`.`aluno` (`matricula`,`nome`,`sexo`,`estado_civil`,`filiacao`,`endereco`,`telefone`)\n" +
+                    "VALUES (" +
+                    "${aluno.matricula}," +
+                    " \"${aluno.nome}\"," +
+                    " \"${aluno.sexo}\"," +
+                    " \"${aluno.estadoCivil}\"," +
+                    " \"${aluno.filiacao}\"," +
+                    " \"${aluno.endereco}\"," +
+                    " \"${aluno.telefone}\");"
 
         entityManager
             .createNativeQuery(sqlStatment)
