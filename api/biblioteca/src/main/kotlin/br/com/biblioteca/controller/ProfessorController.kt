@@ -11,19 +11,4 @@ class ProfessorController(
     private val professorRepository: ProfessorRepository
 ) {
 
-    @PostMapping
-    fun create(@RequestBody professor: Professor) {
-        professorRepository.save(professor)
-    }
-
-    @GetMapping("/{id}")
-    fun getById(@PathVariable id: Int) : Optional<Professor> {
-        return professorRepository.findById(id)
-    }
-
-    @GetMapping
-    fun getAll() : List<Professor> {
-        return professorRepository.findAll()
-    }
-
 }

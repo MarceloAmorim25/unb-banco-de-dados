@@ -1,27 +1,28 @@
 package br.com.biblioteca.controller
 
-import br.com.biblioteca.entity.Aluno
+import br.com.biblioteca.dto.AlunoRequest
 import br.com.biblioteca.repository.AlunoRepository
 import org.springframework.web.bind.annotation.*
 
-@RequestMapping("v1/alunos")
+@RequestMapping("/v1/alunos")
 @RestController
 class AlunoController(
     private val alunoRepository: AlunoRepository
 ) {
 
     @PostMapping
-    fun create(@RequestBody aluno: Aluno) {
+    fun create(@RequestBody alunoRequest: AlunoRequest) {
+        val aluno = alunoRequest.toEntity()
         alunoRepository.save(aluno)
     }
 
     @GetMapping("/{id}")
-    fun getById(@PathVariable id: String){
+    fun getById(@PathVariable id: String) {
         return alunoRepository.findById(id)
     }
 
     @GetMapping
-    fun getAll(){
+    fun getAll() {
         return alunoRepository.findAll()
     }
 

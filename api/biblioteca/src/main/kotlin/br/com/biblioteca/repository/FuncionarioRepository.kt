@@ -1,37 +1,6 @@
 package br.com.biblioteca.repository
 
-import org.springframework.stereotype.Component
-import javax.persistence.EntityManager
+import br.com.biblioteca.entity.Funcionario
+import org.springframework.data.jpa.repository.JpaRepository
 
-
-@Component
-class FuncionarioRepository(
-    private val entityManager : EntityManager
-) {
-
-    fun save() {
-        entityManager
-            .createNativeQuery("")
-    }
-
-    fun update() {
-        entityManager
-            .createNativeQuery("")
-    }
-
-    fun findById() {
-        entityManager
-            .createNativeQuery("")
-    }
-
-    fun findAll() {
-        entityManager
-            .createNativeQuery("")
-    }
-
-    fun delete() {
-        entityManager
-            .createNativeQuery("")
-    }
-
-}
+interface FuncionarioRepository : JpaRepository<Funcionario, Int>
