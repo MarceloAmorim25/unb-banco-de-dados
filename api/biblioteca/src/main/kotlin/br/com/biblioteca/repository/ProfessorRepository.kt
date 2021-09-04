@@ -1,5 +1,6 @@
 package br.com.biblioteca.repository
 
+import br.com.biblioteca.entity.Aluno
 import br.com.biblioteca.entity.Professor
 import org.springframework.stereotype.Component
 import javax.persistence.EntityManager
@@ -33,6 +34,28 @@ class ProfessorRepository {
             .createNativeQuery(sqlStatment)
             .executeUpdate()
 
+    }
+
+    fun findAll() {
+
+        val sqlStatment = "SELECT * FROM bibliotecadb.professor;"
+        entityManager.createNativeQuery(sqlStatment, Aluno::class.java)
+
+    }
+
+    fun update() {
+        entityManager
+            .createNativeQuery("")
+    }
+
+    fun findById(id: String) {
+        entityManager
+            .createNativeQuery("")
+    }
+
+    fun delete() {
+        entityManager
+            .createNativeQuery("")
     }
 
 }

@@ -1,4 +1,4 @@
-package br.com.biblioteca.dto
+package br.com.biblioteca.dto.professor
 
 import br.com.biblioteca.entity.Professor
 

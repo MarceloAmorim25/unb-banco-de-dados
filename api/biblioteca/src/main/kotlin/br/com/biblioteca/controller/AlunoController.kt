@@ -1,6 +1,6 @@
 package br.com.biblioteca.controller
 
-import br.com.biblioteca.dto.AlunoRequest
+import br.com.biblioteca.dto.aluno.AlunoRequest
 import br.com.biblioteca.repository.AlunoRepository
 import org.springframework.web.bind.annotation.*
 

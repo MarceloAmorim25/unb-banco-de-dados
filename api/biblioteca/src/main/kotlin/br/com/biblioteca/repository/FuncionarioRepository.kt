@@ -37,4 +37,26 @@ class FuncionarioRepository {
 
     }
 
+    fun findById(id: String) {
+        entityManager
+            .createNativeQuery("")
+    }
+
+    fun findAll() {
+
+        val sqlStatment = "SELECT * FROM bibliotecadb.professor;"
+        entityManager.createNativeQuery(sqlStatment, Aluno::class.java)
+
+    }
+
+    fun update() {
+        entityManager
+            .createNativeQuery("")
+    }
+
+    fun delete() {
+        entityManager
+            .createNativeQuery("")
+    }
+
 }

@@ -1,4 +1,4 @@
-package br.com.biblioteca.dto
+package br.com.biblioteca.dto.funcionario
 
 import br.com.biblioteca.entity.Funcionario
 
