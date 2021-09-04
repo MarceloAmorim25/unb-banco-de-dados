@@ -11,6 +11,14 @@ Marcelo Amorim
 Repositório dedicado à matéria de Banco de Dados. Esse sistema fictício é a tentativa de traduzir um minimundo numa API. O desenvolvimento
 é focado em aprofundar conceitos de bancos de dados relacionais, não sendo, portanto, o foco desse repositório a API em si.
 
+## Estrutural geral do projeto
+
+
+![](/estrutura-geral.png)
+
+
+## Setup ambiente para executar a API
+
 Como configurar o ambiente:
 
 - Uma opção é criar uma instância do MySql via Docker. O arquivo docker-compose.yaml facilitará essa tarefa. É necessário executar o comando na pasta do arquivo: 
