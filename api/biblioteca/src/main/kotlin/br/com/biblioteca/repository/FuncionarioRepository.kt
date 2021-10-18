@@ -42,6 +42,17 @@ class FuncionarioRepository {
             .createNativeQuery("")
     }
 
+    fun contagemAll(){
+        val sqlStatment = "SELECT COUNT(*) AS Contagem FROM( " +
+                "SELECT nome FROM `bibliotecadb`.`Aluno`" +
+                "UNION ALL" +
+                "SELECT nome FROM `bibliotecadb`.`Funcionario`" +
+                "UNION" +
+                "SELECT nome FROM `bibliotecadb`.`Professor`" +
+                ") AS users";
+        entityManager.createNativeQuery(sqlStatment, Int);
+    }
+
     fun findAll() {
 
         val sqlStatment = "SELECT * FROM bibliotecadb.professor;"
