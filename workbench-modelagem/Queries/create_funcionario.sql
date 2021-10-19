@@ -1,5 +1,5 @@
 INSERT INTO
-	mydb.Funcionario
+	bibliotecadb.Funcionario
     (
 		matricula,
         nome,

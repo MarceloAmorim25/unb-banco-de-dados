@@ -1,5 +1,5 @@
 INSERT INTO
-	mydb.Professor
+	bibliotecadb.Professor
     (
 		matricula,
         nome,
