@@ -6,8 +6,6 @@ INSERT INTO
         sexo,
         estado_civil,
         filiacao,
-        endereco,
-        telefone,
         carga_horaria,
         titulacao,
         ano_titulacao
@@ -18,8 +16,6 @@ VALUES (
     'Masculino',
     'Casada',
     'Partido Y',
-    'Segunda esquina a esquerda',
-    '932169721',
     8,
     'x',
     '2020'

@@ -5,16 +5,12 @@ INSERT INTO
         nome,
         sexo,
         estado_civil,
-        filiacao,
-        endereco,
-        telefone
+        filiacao
     )
 VALUES (
 	'190027623',
     'Isabel Ferreira',
     'Masculino',
     'Casada',
-    'Partido Y',
-    'Segunda esquina a esquerda',
-    '932169721'
+    'Partido Y'
 );
