@@ -76,6 +76,7 @@ VALUES
     "9",
     "1234512345"
 );
+
 SELECT * FROM bibliotecadb.Endereco;
 
 -- -----------------------------------------------------
@@ -92,11 +93,28 @@ INSERT INTO `bibliotecadb`.`Aluno`
 VALUES
 (
 	"190027623",
-    "Isabel Ferreira",
-    "Masculino",
+    "Isabela de Souza Ferreira",
+    "Feminina",
     "Casada",
     "Partido Y",
 	"1"
+);
+
+INSERT INTO `bibliotecadb`.`Aluno`
+(`matricula`,
+`nome`,
+`sexo`,
+`estado_civil`,
+`filiacao`,
+`Endereco_idEndereco`)
+VALUES
+(
+	"190027629",
+    "Júlio Fernandez Pereira",
+    "Masculino",
+    "Casado",
+    "Partido Z",
+	"2"
 );
 
 SELECT * FROM bibliotecadb.Aluno;
@@ -125,10 +143,62 @@ VALUES
     3,
     "sabe dar mortal",
     "preta",
-    "1"
+    "3"
 );
 
 SELECT * FROM bibliotecadb.Funcionario;
+
+-- -----------------------------------------------------
+-- Criar Professor e consultar
+-- -----------------------------------------------------
+
+INSERT INTO `bibliotecadb`.`Professor`
+(`matricula`,
+`nome`,
+`sexo`,
+`estado_civil`,
+`filiacao`,
+`carga_horaria`,
+`titulacao`,
+`ano_titulacao`,
+`Endereco_idEndereco`)
+VALUES
+(
+    "190027626",
+    "Carlos Ferreira",
+    "Masculino",
+    "Casado",
+    "Partido Y",
+    8,
+    "x",
+    "2020",
+    "4"
+);
+
+INSERT INTO `bibliotecadb`.`Professor`
+(`matricula`,
+`nome`,
+`sexo`,
+`estado_civil`,
+`filiacao`,
+`carga_horaria`,
+`titulacao`,
+`ano_titulacao`,
+`Endereco_idEndereco`)
+VALUES
+(
+    "190027627",
+    "Jorge dos Reis",
+    "Masculino",
+    "Casado",
+    "Partido Y",
+    8,
+    "x",
+    "2020",
+    "5"
+);
+
+SELECT * FROM bibliotecadb.Professor;
 
 -- -----------------------------------------------------
 -- Criar Livro e consultar
@@ -157,7 +227,6 @@ VALUES
 
 SELECT * FROM bibliotecadb.Livro;
 
-
 -- -----------------------------------------------------
 -- Criar Pagamento e consultar
 -- -----------------------------------------------------
@@ -174,36 +243,6 @@ VALUES
 );
 
 SELECT * FROM bibliotecadb.Pagamento;
-
-
--- -----------------------------------------------------
--- Criar Professor e consultar
--- -----------------------------------------------------
-
-INSERT INTO `bibliotecadb`.`Professor`
-(`matricula`,
-`nome`,
-`sexo`,
-`estado_civil`,
-`filiacao`,
-`carga_horaria`,
-`titulacao`,
-`ano_titulacao`,
-`Endereco_idEndereco`)
-VALUES
-(
-    "190027624",
-    "Isabel Ferreira",
-    "Masculino",
-    "Casada",
-    "Partido Y",
-    8,
-    "x",
-    "2020",
-    "1"
-);
-
-SELECT * FROM bibliotecadb.Professor;
 
 -- -----------------------------------------------------
 -- Criar Telefone e consultar
