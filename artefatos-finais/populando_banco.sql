@@ -1,3 +1,7 @@
+-- -----------------------------------------------------
+-- Criar endereço e consultar
+-- -----------------------------------------------------
+
 INSERT INTO `bibliotecadb`.`Endereco`
 (`idEndereco`,
 `Bairro`,
@@ -12,6 +16,12 @@ VALUES
     "12345",
     "12345"
 );
+
+SELECT * FROM bibliotecadb.Endereco;
+
+-- -----------------------------------------------------
+-- Criar Aluno e consultar
+-- -----------------------------------------------------
 
 INSERT INTO `bibliotecadb`.`Aluno`
 (`matricula`,
@@ -29,6 +39,12 @@ VALUES
     "Partido Y",
 	"1"
 );
+
+SELECT * FROM bibliotecadb.Aluno;
+
+-- -----------------------------------------------------
+-- Criar Funcionario e consultar
+-- -----------------------------------------------------
 
 INSERT INTO `bibliotecadb`.`Funcionario`
 (`matricula`,
@@ -53,6 +69,12 @@ VALUES
     "1"
 );
 
+SELECT * FROM bibliotecadb.Funcionario;
+
+-- -----------------------------------------------------
+-- Criar Livro e consultar
+-- -----------------------------------------------------
+
 INSERT INTO `bibliotecadb`.`Livro`
 (`codigo`,
 `titulo`,
@@ -64,15 +86,22 @@ INSERT INTO `bibliotecadb`.`Livro`
 `isbn`)
 VALUES
 (
-   1,
+	1,
    "Arquitetura Limpa",
    "Alta Books",
    "Uncle Bob",
    2020,
    232,
    "Engenharia de Software",
-   "oefijoisjo"
+   "123123123"
 );
+
+SELECT * FROM bibliotecadb.Livro;
+
+
+-- -----------------------------------------------------
+-- Criar Pagamento e consultar
+-- -----------------------------------------------------
 
 INSERT INTO `bibliotecadb`.`Pagamento`
 (`codigo`,
@@ -84,6 +113,13 @@ VALUES
     "10",
     "2"
 );
+
+SELECT * FROM bibliotecadb.Pagamento;
+
+
+-- -----------------------------------------------------
+-- Criar Professor e consultar
+-- -----------------------------------------------------
 
 INSERT INTO `bibliotecadb`.`Professor`
 (`matricula`,
@@ -108,6 +144,11 @@ VALUES
     "1"
 );
 
+SELECT * FROM bibliotecadb.Professor;
+
+-- -----------------------------------------------------
+-- Criar Telefone e consultar
+-- -----------------------------------------------------
 
 INSERT INTO `bibliotecadb`.`Telefone`
 (`idTelefone`,
@@ -123,6 +164,12 @@ VALUES
     NULL,
     190027623
 );
+
+SELECT * FROM bibliotecadb.Telefone;
+
+-- -----------------------------------------------------
+-- Criar Empréstimo e consultar
+-- -----------------------------------------------------
 
 INSERT INTO `bibliotecadb`.`Emprestimo`
 (`idEmprestimo`,

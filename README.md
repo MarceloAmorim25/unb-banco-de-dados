@@ -42,14 +42,20 @@ Como configurar o ambiente:
 
 ## Pesquisas
 
-1 - Quantidade  de  livros  emprestados  por  período  e  por  aluno/professor  e funcionário;
+1 - Quantidade  de  livros  emprestados  por  período  e  por  aluno / professor  e funcionário;
 
+```
+
+```
 
 2 - Livros mais emprestados por período;
 
 
 3 - Livros por Área;
 
+```
+
+```
 
 4 - Quantidade de alunos, professores e funcionários cadastrados na Biblioteca;
 
