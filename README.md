@@ -40,7 +40,13 @@ Como configurar o ambiente:
 - SGBD: MySQL
 - GUI para interagir com o banco de dados: MySQL Workbench
 
-## Modelagem conceitual
+## Pesquisas
+
+1 - Quantidade  de  livros  emprestados  por  período  e  por  aluno/professor  e funcionário;
+2 - Livros mais emprestados por período;
+3 - Livros por Área;
+4 - Quantidade de alunos, professores e funcionários cadastrados na Biblioteca;
+5 - Pagamento Total de Multas efetuado em um bimestre.
 
 ## Modelagem Mysql-Workbench
 
