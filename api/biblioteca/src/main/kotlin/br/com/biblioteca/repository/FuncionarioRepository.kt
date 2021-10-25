@@ -53,6 +53,10 @@ class FuncionarioRepository {
         entityManager.createNativeQuery(sqlStatment, Int);
     }
 
+    fun totalSumAllPayments(bimestre: int){
+        val sqlStatement = "SELECT SUM(valor_pago+juros) FROM Pagamento JOIN Emprestimo ON Emprestimo.Pagamento_codigo = Pagamento.codigo;"
+    }
+
     fun findAll() {
 
         val sqlStatment = "SELECT * FROM bibliotecadb.professor;"

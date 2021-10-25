@@ -7,9 +7,9 @@ INSERT INTO
         Aluno_matricula
 	)
 VALUES (
-	2,
-    '988888888',
+	3,
+    '988888887',
     NULL,
-    NULL,
-    190027623
+    190027624,
+    NULL
 );
