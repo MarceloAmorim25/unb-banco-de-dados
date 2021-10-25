@@ -17,6 +17,65 @@ VALUES
     "12345"
 );
 
+INSERT INTO `bibliotecadb`.`Endereco`
+(`idEndereco`,
+`Bairro`,
+`Rua`,
+`Numero`,
+`CEP`)
+VALUES
+(
+    "2",
+    "Pistão Sul",
+    "Rua 3",
+    "12",
+    "1234512345"
+);
+
+INSERT INTO `bibliotecadb`.`Endereco`
+(`idEndereco`,
+`Bairro`,
+`Rua`,
+`Numero`,
+`CEP`)
+VALUES
+(
+    "3",
+    "Setor Leste",
+    "Conjunto 13",
+    "206",
+    "1234512345"
+);
+
+INSERT INTO `bibliotecadb`.`Endereco`
+(`idEndereco`,
+`Bairro`,
+`Rua`,
+`Numero`,
+`CEP`)
+VALUES
+(
+    "4",
+    "Sobradinho",
+    "3",
+    "206",
+    "1234512345"
+);
+
+INSERT INTO `bibliotecadb`.`Endereco`
+(`idEndereco`,
+`Bairro`,
+`Rua`,
+`Numero`,
+`CEP`)
+VALUES
+(
+    "5",
+    "Asa Norte",
+    "Conjunto 4",
+    "9",
+    "1234512345"
+);
 SELECT * FROM bibliotecadb.Endereco;
 
 -- -----------------------------------------------------
