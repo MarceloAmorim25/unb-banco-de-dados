@@ -225,6 +225,110 @@ VALUES
    "123123123"
 );
 
+INSERT INTO `bibliotecadb`.`Livro`
+(`codigo`,
+`titulo`,
+`editora`,
+`autor`,
+`ano_edicao`,
+`numero_paginas`,
+`area_conhecimento`,
+`isbn`)
+VALUES
+(
+	2,
+   "A Revolução dos Bixos",
+   "Companhia das Letras",
+   "George Orwell",
+   2007,
+   147,
+   "Fantasia",
+   "1231983543"
+);
+
+INSERT INTO `bibliotecadb`.`Livro`
+(`codigo`,
+`titulo`,
+`editora`,
+`autor`,
+`ano_edicao`,
+`numero_paginas`,
+`area_conhecimento`,
+`isbn`)
+VALUES
+(
+	3,
+   "Introdução à Linguagem SQL",
+   "Novatec",
+   "Thomas Nield",
+   2016,
+   141,
+   "Banco de Dados",
+   "981758873"
+);
+
+INSERT INTO `bibliotecadb`.`Livro`
+(`codigo`,
+`titulo`,
+`editora`,
+`autor`,
+`ano_edicao`,
+`numero_paginas`,
+`area_conhecimento`,
+`isbn`)
+VALUES
+(
+	3,
+   "Python para Análise de Dados",
+   "Novatec",
+   "Wes McKinney",
+   2018,
+   615,
+   "Análise de Dados",
+   "9817582133"
+);
+
+INSERT INTO `bibliotecadb`.`Livro`
+(`codigo`,
+`titulo`,
+`editora`,
+`autor`,
+`ano_edicao`,
+`numero_paginas`,
+`area_conhecimento`,
+`isbn`)
+VALUES
+(
+	4,
+   "Python para Análise de Dados",
+   "Novatec",
+   "Wes McKinney",
+   2018,
+   615,
+   "Análise de Dados",
+   "9817582133"
+);
+
+INSERT INTO `bibliotecadb`.`Livro`
+(`codigo`,
+`titulo`,
+`editora`,
+`autor`,
+`ano_edicao`,
+`numero_paginas`,
+`area_conhecimento`,
+`isbn`)
+VALUES
+(
+	5,
+   "O Aranha Escarlate: De volta à máscara",
+   "Panini Comics",
+   "Ben Reilly",
+   2018,
+   124,
+   "Heróis",
+   "8201282133"
+);
 SELECT * FROM bibliotecadb.Livro;
 
 -- -----------------------------------------------------
