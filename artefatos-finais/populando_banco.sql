@@ -430,7 +430,64 @@ VALUES
 SELECT * FROM bibliotecadb.Pagamento;
 
 -- -----------------------------------------------------
--- Criar Empréstimo e consultar
+-- Criar Multa e consulta
+-- -----------------------------------------------------
+INSERT INTO `bibliotecadb`.`Multa`
+(`codigo`,
+`valor_pago`,
+`juros`)
+VALUES
+(
+	1,
+	2,
+	0.3
+);
+
+INSERT INTO `bibliotecadb`.`Multa`
+(`codigo`,
+`valor_pago`,
+`juros`)
+VALUES
+(
+	2,
+	2,
+	0.5
+);
+
+INSERT INTO `bibliotecadb`.`Multa`
+(`codigo`,
+`valor_pago`,
+`juros`)
+VALUES
+(
+	3,
+	2,
+	0.5
+);
+
+INSERT INTO `bibliotecadb`.`Multa`
+(`codigo`,
+`valor_pago`,
+`juros`)
+VALUES
+(
+	4,
+	2,
+	0.7
+);
+
+INSERT INTO `bibliotecadb`.`Multa`
+(`codigo`,
+`valor_pago`,
+`juros`)
+VALUES
+(
+	5,
+	2,
+	0.9
+);
+-- -----------------------------------------------------
+-- Criar Empréstimo e consulta
 -- -----------------------------------------------------
 
 INSERT INTO `bibliotecadb`.`Emprestimo`
@@ -446,12 +503,96 @@ VALUES
 (
 	1,
 	1,
-	"2021-10-20 20:10:10",
-    "2021-10-27 20:10:10",
+	"2021-10-20 00:00:00",
+    "2021-10-27 00:00:00",
 	190027622,
 	NULL,
     NULL,
 	1
+);
+
+INSERT INTO `bibliotecadb`.`Emprestimo`
+(`idEmprestimo`,
+`Livro_codigo`,
+`data_emprestimo`,
+`data_devolucao`,
+`Funcionario_matricula`,
+`Aluno_matricula`,
+`Professor_matricula`,
+`Pagamento_codigo`)
+VALUES
+(
+	2,
+	1,
+	"2021-10-19 20:10:10",
+    "2021-10-26 20:10:10",
+	NULL,
+	190027629,
+    NULL,
+	1
+);
+
+INSERT INTO `bibliotecadb`.`Emprestimo`
+(`idEmprestimo`,
+`Livro_codigo`,
+`data_emprestimo`,
+`data_devolucao`,
+`Funcionario_matricula`,
+`Aluno_matricula`,
+`Professor_matricula`,
+`Pagamento_codigo`)
+VALUES
+(
+	3,
+	4,
+	"2021-09-19 00:00:00",
+    "2021-10-26 00:00:00",
+	NULL,
+	NULL,
+    190027627,
+	4
+);
+
+INSERT INTO `bibliotecadb`.`Emprestimo`
+(`idEmprestimo`,
+`Livro_codigo`,
+`data_emprestimo`,
+`data_devolucao`,
+`Funcionario_matricula`,
+`Aluno_matricula`,
+`Professor_matricula`,
+`Pagamento_codigo`)
+VALUES
+(
+	4,
+	5,
+	"2021-08-19 00:00:00",
+    "2021-10-01 00:00:00",
+	NULL,
+	NULL,
+    190027626,
+	5
+);
+
+INSERT INTO `bibliotecadb`.`Emprestimo`
+(`idEmprestimo`,
+`Livro_codigo`,
+`data_emprestimo`,
+`data_devolucao`,
+`Funcionario_matricula`,
+`Aluno_matricula`,
+`Professor_matricula`,
+`Pagamento_codigo`)
+VALUES
+(
+	5,
+	5,
+	"2021-08-10 00:00:00",
+    "2021-09-12 00:00:00",
+	NULL,
+	NULL,
+    190027623,
+	5
 );
 
 SELECT * FROM bibliotecadb.Emprestimo;
