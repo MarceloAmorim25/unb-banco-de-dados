@@ -201,6 +201,87 @@ VALUES
 SELECT * FROM bibliotecadb.Professor;
 
 -- -----------------------------------------------------
+-- Criar Telefone e consultar
+-- -----------------------------------------------------
+
+INSERT INTO `bibliotecadb`.`Telefone`
+(`idTelefone`,
+`Numero`,
+`Funcionario_matricula`,
+`Aluno_matricula`,
+`Professor_matricula`)
+VALUES
+(
+    1,
+    "(46) 95489-7971",
+    NULL,
+    NULL,
+    190027626
+);
+
+INSERT INTO `bibliotecadb`.`Telefone`
+(`idTelefone`,
+`Numero`,
+`Funcionario_matricula`,
+`Aluno_matricula`,
+`Professor_matricula`)
+VALUES
+(
+    2,
+    "(16) 99942-7688",
+    NULL,
+    NULL,
+    190027627
+);
+
+INSERT INTO `bibliotecadb`.`Telefone`
+(`idTelefone`,
+`Numero`,
+`Funcionario_matricula`,
+`Aluno_matricula`,
+`Professor_matricula`)
+VALUES
+(
+    3,
+    "(79) 94811-9667",
+    190027622,
+    NULL,
+    NULL
+);
+
+INSERT INTO `bibliotecadb`.`Telefone`
+(`idTelefone`,
+`Numero`,
+`Funcionario_matricula`,
+`Aluno_matricula`,
+`Professor_matricula`)
+VALUES
+(
+    4,
+    "(31) 96208-8867",
+    NULL,
+    190027629,
+    NULL
+);
+
+INSERT INTO `bibliotecadb`.`Telefone`
+(`idTelefone`,
+`Numero`,
+`Funcionario_matricula`,
+`Aluno_matricula`,
+`Professor_matricula`)
+VALUES
+(
+    5,
+    "(73) 90619-2835",
+    NULL,
+    190027623,
+    NULL
+);
+
+SELECT * FROM bibliotecadb.Telefone;
+
+-- -----------------------------------------------------
 -- Criar Livro e consultar
 -- -----------------------------------------------------
 
@@ -347,27 +428,6 @@ VALUES
 );
 
 SELECT * FROM bibliotecadb.Pagamento;
-
--- -----------------------------------------------------
--- Criar Telefone e consultar
--- -----------------------------------------------------
-
-INSERT INTO `bibliotecadb`.`Telefone`
-(`idTelefone`,
-`Numero`,
-`Funcionario_matricula`,
-`Aluno_matricula`,
-`Professor_matricula`)
-VALUES
-(
-    1,
-    "988888888",
-    NULL,
-    NULL,
-    190027623
-);
-
-SELECT * FROM bibliotecadb.Telefone;
 
 -- -----------------------------------------------------
 -- Criar Empréstimo e consultar
