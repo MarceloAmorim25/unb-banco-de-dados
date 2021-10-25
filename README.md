@@ -43,10 +43,36 @@ Como configurar o ambiente:
 ## Pesquisas
 
 1 - Quantidade  de  livros  emprestados  por  período  e  por  aluno/professor  e funcionário;
+
+
 2 - Livros mais emprestados por período;
+
+
 3 - Livros por Área;
+
+
 4 - Quantidade de alunos, professores e funcionários cadastrados na Biblioteca;
+
+```
+
+SELECT COUNT(*) AS Contagem FROM(SELECT nome FROM `bibliotecadb`.`Aluno`
+UNION ALL 
+SELECT nome FROM `bibliotecadb`.`Funcionario`
+UNION 
+SELECT nome FROM `bibliotecadb`.`Professor`
+) AS users";
+
+```
+
+
 5 - Pagamento Total de Multas efetuado em um bimestre.
+
+```
+
+SELECT SUM(valor_pago+juros) FROM Pagamento JOIN Emprestimo ON Emprestimo.Pagamento_codigo = Pagamento.codigo;
+
+```
+
 
 ## Modelagem Mysql-Workbench
 
