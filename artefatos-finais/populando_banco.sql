@@ -435,6 +435,7 @@ SELECT * FROM bibliotecadb.Pagamento;
 
 INSERT INTO `bibliotecadb`.`Emprestimo`
 (`idEmprestimo`,
+`Livro_codigo`,
 `data_emprestimo`,
 `data_devolucao`,
 `Funcionario_matricula`,
@@ -443,11 +444,14 @@ INSERT INTO `bibliotecadb`.`Emprestimo`
 `Pagamento_codigo`)
 VALUES
 (
-    "1",
-    "2021-10-20 20:10:10",
+	1,
+	1,
+	"2021-10-20 20:10:10",
     "2021-10-27 20:10:10",
-    "190027622",
+	190027622,
+	NULL,
     NULL,
-    NULL,
-    NULL
+	1
 );
+
+SELECT * FROM bibliotecadb.Emprestimo;
